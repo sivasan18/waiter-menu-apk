@@ -1570,22 +1570,3 @@ function addItemToBill(billId) {
 window.deleteBillItem = deleteBillItem;
 window.addItemToBill = addItemToBill;
 
-// Check if localStorage is available APK Edit Mode
-function checkStorage() {
-    try {
-        localStorage.setItem('test', 'test');
-        localStorage.removeItem('test');
-        return true;
-    } catch(e) {
-        alert('Storage not available. Data will not persist.');
-        return false;
-    }
-}
-
-// Call in initializeApp()
-function initializeApp() {
-    checkStorage();
-    loadTheme();
-    // ... rest of your code
-}
-//APK Edit Mode end
